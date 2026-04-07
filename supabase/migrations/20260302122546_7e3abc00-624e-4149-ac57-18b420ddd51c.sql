@@ -1,0 +1,1 @@
+ALTER TABLE public.dealers DROP CONSTRAINT IF EXISTS dealers_user_id_fkey;
