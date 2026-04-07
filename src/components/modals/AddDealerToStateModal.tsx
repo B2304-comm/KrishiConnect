@@ -10,7 +10,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { UserPlus, MapPin, Truck } from "lucide-react";
 import { toast } from "sonner";
 import { useDealers } from "@/hooks/useDealers";
-import { ensureCompanyProfile } from "@/lib/companyProfile.ts";
+import { ensureCompanyProfile } from "@/lib/companyProfile";
 
 const indianStates = [
   "Andhra Pradesh", "Arunachal Pradesh", "Assam", "Bihar", "Chhattisgarh",
