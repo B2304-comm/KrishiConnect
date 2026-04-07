@@ -70,6 +70,36 @@ npm run ai:dev
 - Deploy the AI backend on Railway, Render, or another Python hosting service
 - Store Supabase credentials in environment variables for production
 
+## Live Deployment Guide
+
+### Frontend (Vercel)
+
+1. Sign in to https://vercel.com with GitHub.
+2. Click **New Project** and import `B2304-comm/KrishiConnect`.
+3. Set **Framework Preset** to `Vite`.
+4. Set **Build Command** to `npm run build`.
+5. Set **Output Directory** to `dist`.
+6. Add environment variables:
+   - `VITE_SUPABASE_URL`
+   - `VITE_SUPABASE_ANON_KEY`
+   - `VITE_API_URL`
+7. Deploy the project.
+
+### Backend (Railway / Render)
+
+1. Create a new Python service and connect the same repository.
+2. Use the command:
+   ```sh
+   uvicorn ai.api:app --host 0.0.0.0 --port $PORT
+   ```
+3. Add environment variables needed by the AI backend.
+4. Deploy the service and copy the generated API URL.
+
+### Connect frontend to backend
+
+1. In Vercel, set `VITE_API_URL` to the backend URL.
+2. Redeploy the frontend.
+
 ## Contact
 
 For questions or updates, open an issue in the repository or connect via GitHub.
