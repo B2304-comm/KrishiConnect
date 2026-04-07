@@ -1,27 +1,36 @@
 # KrishiConnect
 
-KrishiConnect is a fertilizer distribution platform that helps farmers, retailers, dealers, companies, and government teams manage stock visibility, bookings, and supply chain tracking.
+KrishiConnect is a modern fertilizer distribution platform designed to connect farmers, retailers, dealers, companies, and government stakeholders. It provides a centralized interface for stock visibility, booking management, supply chain tracking, and AI-driven crop recommendation.
+
+## Features
+
+- Real-time inventory tracking for fertilizer distribution
+- Role-based access for farms, dealers, companies, and government teams
+- Booking and order management workflows
+- Supabase-backed authentication and database integration
+- AI crop prediction service for fertilizer recommendations
+- Responsive UI built with Vite, React, TypeScript, and Tailwind CSS
 
 ## Tech Stack
 
-- Vite
-- React
-- TypeScript
-- Tailwind CSS
-- Supabase
+- Frontend: `Vite`, `React`, `TypeScript`, `Tailwind CSS`
+- Backend / AI: `FastAPI`, `Uvicorn`, `Python`
+- Database / Auth: `Supabase`
 
-## Local Development
+## Quick Start
 
 ```sh
 npm install
 npm run dev
 ```
 
-The app runs on `http://localhost:8080` by default.
+Open `http://localhost:8080` in your browser.
 
-## AI Crop Prediction Setup
+## AI Backend Setup
 
-To run the frontend and AI backend together in local development on Windows:
+The project includes an optional AI crop prediction service in the `ai/` folder.
+
+To run both frontend and backend together on Windows:
 
 ```sh
 npm run dev:full
@@ -29,28 +38,38 @@ npm run dev:full
 
 This starts:
 
-- frontend on `http://127.0.0.1:8080`
-- AI backend on `http://127.0.0.1:8001`
+- Frontend at `http://127.0.0.1:8080`
+- AI backend at `http://127.0.0.1:8001`
 
-If you only want the AI backend:
+If you only need the AI backend:
 
 ```sh
 npm run ai:dev
 ```
 
-The frontend uses a local Vite proxy in development, so the AI tools work without extra browser CORS setup.
+## Scripts
 
-## Available Scripts
-
-- `npm run dev` starts the development server.
-- `npm run ai:dev` starts the Python AI backend only.
-- `npm run dev:full` starts both the AI backend and the frontend for local development.
-- `npm run build` creates a production build.
-- `npm run preview` previews the production build locally.
-- `npm run test` runs the Vitest test suite.
+- `npm run dev` — Start the frontend development server
+- `npm run ai:dev` — Start only the AI backend
+- `npm run dev:full` — Run frontend and AI backend together
+- `npm run build` — Build the production frontend bundle
+- `npm run preview` — Preview the production build locally
+- `npm run test` — Run the Vitest test suite
 
 ## Project Structure
 
-- `src/` contains the frontend application.
-- `supabase/` contains database configuration and SQL migrations.
-- `ai/` contains the crop prediction service and model assets.
+- `src/` — Frontend application source code
+- `ai/` — AI crop prediction API and model code
+- `supabase/` — Database schema and migration files
+- `public/` — Static assets
+- `scripts/` — Local development helper scripts
+
+## Deployment Notes
+
+- Use Vercel or Netlify for the frontend deployment
+- Deploy the AI backend on Railway, Render, or another Python hosting service
+- Store Supabase credentials in environment variables for production
+
+## Contact
+
+For questions or updates, open an issue in the repository or connect via GitHub.
