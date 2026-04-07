@@ -9,7 +9,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { Sprout, User, Store, Building, Factory } from "lucide-react";
-import { ensureCompanyProfile } from "@/lib/companyProfile";
+import { ensureCompanyProfile } from "@/lib/companyProfile.ts";
 
 type Role = "farmer" | "shop" | "dealer" | "company";
 
